@@ -106,14 +106,8 @@ df |>
 
 # Visualization with ggplot2 ----------------------------------------------
 df |> 
-  ggplot(aes(x = supp, y = len)) +
-  geom_point()
-
-
-df |> 
   ggplot(aes(x = supp, y = len, color = factor(dose))) +
   geom_point()
-
 
 df |> 
   ggplot(aes(x = supp, y = len, color = factor(dose))) +
