@@ -1,7 +1,8 @@
-
 # Basic R for health students
 
-Suggested reading day 1:
+Scripts are available in following folder: <https://github.com/SteffanChristiansen/basic_R/blob/main/scripts/sandbox.R>
+
+[Suggested reading day 1:]{.underline}
 
 - Introduction (<https://r4ds.hadley.nz/>)
 
@@ -11,6 +12,6 @@ Suggested reading day 1:
 
 - Chapter 7 (<https://r4ds.hadley.nz/data-import.html>)
 
-Suggested reading day 2:
+[Suggested reading day 2:]{.underline}
 
 tbd

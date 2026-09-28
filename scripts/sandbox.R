@@ -13,6 +13,29 @@ plot(df$a, df$b)
 
 
 
+# Recommended workflow ----------------------------------------------------
+# Consistent naming
+a <- 10
+b <- 20
+
+
+# Avoid
+a <- 10
+B <- 10
+
+# Good naming
+total_sales <- 12500
+average_price <- mean(price)
+
+
+# Avoid
+total sales <- 12500
+total_sales_final2 <- 12500
+
+
+
+
+
 # Objects and data types --------------------------------------------------
 age <- 35
 name <- "Anna"
@@ -58,7 +81,6 @@ df |>
 
 df |> 
   slice_max(len, n = 3)
-
 
 df |> 
   group_by(supp, dose) |> 
