@@ -69,6 +69,7 @@ library(readxl)
 
 
 
+
 # Counting, slicing and summarising ---------------------------------------
 ?ToothGrowth
 df <- ToothGrowth
@@ -89,6 +90,50 @@ df |>
     median = median(len),
     sd = sd(len)
   )
+
+
+# Core dplyr verbs --------------------------------------------------------
+df |> 
+  select(dose)
+
+df |> 
+  filter(supp == "VC") |> 
+  arrange(len)
+
+df |> 
+  mutate(len_mm = len/1000)
+
+
+# Visualization with ggplot2 ----------------------------------------------
+df |> 
+  ggplot(aes(x = supp, y = len)) +
+  geom_point()
+
+
+df |> 
+  ggplot(aes(x = supp, y = len, color = factor(dose))) +
+  geom_point()
+
+
+df |> 
+  ggplot(aes(x = supp, y = len, color = factor(dose))) +
+  geom_point(position = position_dodge(width = 0.5)) +
+  labs(x = "Supplement type",
+       y = "Tooth length",
+       color = "Dose (milligrams/day)") + 
+  theme_minimal()
+
+df |> 
+  ggplot(aes(x = factor(dose), y = len, fill = supp)) +
+  geom_boxplot() +
+  labs(x = "Dose (milligrams/day)",
+       y = "Tooth length",
+       color = "Supplement type") + 
+  theme_minimal()
+
+
+
+
 
 
 
