@@ -14,19 +14,20 @@ plot(df$a, df$b)
 
 
 # Recommended workflow ----------------------------------------------------
+
 # Consistent naming
 a <- 10
 b <- 20
-
 
 # Avoid
 a <- 10
 B <- 10
 
+
+
 # Good naming
 total_sales <- 12500
 average_price <- mean(price)
-
 
 # Avoid
 total sales <- 12500
@@ -60,10 +61,10 @@ round(3.14159, digits = 2)
 
 
 # What is the tidyverse? --------------------------------------------------
-install.packages("tidyverse")
+# install.packages("tidyverse")
 library(tidyverse)
 
-# Or load an individual package
+# Load an individual package
 library(readxl)
 
 
@@ -73,6 +74,7 @@ library(readxl)
 # Counting, slicing and summarising ---------------------------------------
 ?ToothGrowth
 df <- ToothGrowth
+glimpse(df)
 
 df |> 
   count(supp)
@@ -122,12 +124,8 @@ df |>
   geom_boxplot() +
   labs(x = "Dose (milligrams/day)",
        y = "Tooth length",
-       color = "Supplement type") + 
+       fill = "Supplement type") + 
   theme_minimal()
-
-
-
-
 
 
 
