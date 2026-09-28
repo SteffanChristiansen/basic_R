@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+data/
+reports/
+results/
+doc/
+scripts/sandbox_hidden.R
