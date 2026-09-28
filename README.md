@@ -1,9 +1,3 @@
----
-
-editor_options: 
-  markdown: 
-    wrap: 72
----
 
 # Basic R for health students
 
