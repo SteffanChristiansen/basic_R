@@ -1,5 +1,8 @@
 
 
+
+
+
 # Create folder structure -------------------------------------------------
 getwd()
 dir() # blank
@@ -14,7 +17,7 @@ dir.create("results/images")
 dir.create("results/processed")
 
 dir() # created folder structure
-
+getwd()
 # GTEx data ---------------------------------------------------------------
 # Instructions:
 # 1) Go to https://gtexportal.org/home/downloads/adult-gtex/metadata

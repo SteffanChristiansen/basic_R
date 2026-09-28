@@ -11,8 +11,6 @@ df <- data.frame(a = c(0,2,3), b = c(0,2,6))
 
 plot(df$a, df$b)
 
-
-
 # Recommended workflow ----------------------------------------------------
 
 # Consistent naming
@@ -57,9 +55,6 @@ mean(c(10, 20, 30))
 round(3.14159, digits = 2)
 ?mean
 
-
-
-
 # What is the tidyverse? --------------------------------------------------
 # install.packages("tidyverse")
 library(tidyverse)
@@ -75,8 +70,9 @@ library(readxl)
 ?ToothGrowth
 df <- ToothGrowth
 glimpse(df)
+str(df)
 
-df |> 
+df |>
   count(supp)
 
 df |> 
@@ -102,22 +98,35 @@ df |>
   filter(supp == "VC") |> 
   arrange(len)
 
+
 df |> 
+  mutate(len_mm = len/1000)
+
+df <- df |> 
   mutate(len_mm = len/1000)
 
 
 # Visualization with ggplot2 ----------------------------------------------
 df |> 
-  ggplot(aes(x = supp, y = len, color = factor(dose))) +
+  slice(1:5) |> 
+  tibble()
+  
+
+df |> 
+  ggplot(aes(x= supp, y = len, color = factor(dose))) + 
+  # ggplot(aes(x = supp, y = len, color = factor(dose))) +
   geom_point()
 
 df |> 
   ggplot(aes(x = supp, y = len, color = factor(dose))) +
-  geom_point(position = position_dodge(width = 0.5)) +
+  geom_point(position = position_dodge(width = 0.5),
+             size = 5,
+             alpha = 0.5) +
   labs(x = "Supplement type",
        y = "Tooth length",
        color = "Dose (milligrams/day)") + 
   theme_minimal()
+
 
 df |> 
   ggplot(aes(x = factor(dose), y = len, fill = supp)) +
@@ -127,7 +136,7 @@ df |>
        fill = "Supplement type") + 
   theme_minimal()
 
-
+?ggsave
 
 
 
