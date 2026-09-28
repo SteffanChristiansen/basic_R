@@ -86,7 +86,7 @@ df |>
   slice_max(len, n = 3)
 
 df |> 
-  group_by(supp, dose) |> 
+  group_by(supp, dose) |>
   reframe(
     mean = mean(len),
     median = median(len),
