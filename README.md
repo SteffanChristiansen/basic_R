@@ -14,4 +14,6 @@ Scripts are available in following folder: <https://github.com/SteffanChristians
 
 **Suggested reading day 2:**
 
-tbd
+- Chapter 4 (<https://r4ds.hadley.nz/workflow-style.html>)
+
+- Chapter 5 (<https://r4ds.hadley.nz/data-tidy.html>)
