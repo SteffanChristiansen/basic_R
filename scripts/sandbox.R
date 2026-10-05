@@ -105,7 +105,6 @@ df |>
 df <- df |> 
   mutate(len_mm = len/1000)
 
-
 # Visualization with ggplot2 ----------------------------------------------
 df |> 
   slice(1:5) |> 
