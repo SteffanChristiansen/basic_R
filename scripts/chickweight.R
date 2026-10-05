@@ -47,16 +47,20 @@ ChickWeight |>
 # Task 2B
 # plot weight against time as scatter plot (colored by diet)
 
+
 # Task 2C
 # plot weight against time as scatter plot  (colored by diet and facetted by diet)
+
 
 # Task 2D
 # fit linear model for chickens on diet 1 and return estimates for intercept, 
 # slope, and p-value
 
+
 # Task 2E
 # plot weight against time for diet 1 and draw the line of the best fit based 
 # on linear model
+
 
 # Task 2F
 # calculate mean per diet at time = 20
